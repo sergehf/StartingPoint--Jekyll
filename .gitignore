@@ -1,0 +1,6 @@
+*~
+_site/
+_build/
+*.swp
+.DS_Store
+.sass-cache
