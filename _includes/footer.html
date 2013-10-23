@@ -1,0 +1,21 @@
+<footer class="siteFooter">
+    <p>&copy; {{ page.date | date_to_string }}</p>
+
+    <nav class="social">
+        {% if site.twitter %}
+        <a href="https://twitter.com/{{ site.twitter }}" title="Follow on Twitter" target="_blank">
+            <i class="icon icon-twitter black"></i>
+        </a>
+        {% endif %}
+
+        {% if site.facebook %}
+        <a href="http://facebook.com/{{ site.facebook }}" title="Follow on Facebook" target="_blank">
+            <i class="icon icon-facebook black"></i>
+        </a>
+        {% endif %}   
+
+        <a href="/feed.xml" title="RSS Feed">
+            <i class="icon icon-rss black"></i>
+        </a>
+    </nav>
+</footer> <!-- /.siteFooter -->

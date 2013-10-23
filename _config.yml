@@ -1,30 +1,82 @@
-name: Your New Jekyll Site
+#####################################################################
+# Blog specific settings
+#####################################################################
 
-source:      .
-destination: ./_build
-plugins:     ./_plugins
-layouts:     ./_layouts
-include:     ['.htaccess']
-exclude:     []
-keep_files:  ['.git','.svn']
-timezone:    nil
-encoding:    nil
+# Blog Information
+title:       					"Site title"
+tagline:     					"subtitle"
+description:  				"site description"
+short_name:   				"Company Name"
+baseurl:          		/
+url:          				http://example.com/
 
-future:      true
-show_drafts: nil
-limit_posts: 0
-pygments:    true
+author:
+  name:       				""
+  email:      				""
 
-relative_permalinks: true
+facebook:     				fbname
+twitter:      				twittername
+github:      					githubname
+gplus:        				'101183822199340201470'
 
-permalink: /:year/:month/:day/:title
-paginate: 10
-paginate_path: 'page:num'
+# Comments
+# disqus:
+#   # Eg. "exampleblog" Set to false to disable comments
+#   shortname:  false
+
+# Sharing settings
+sharing:
+	twitter:    				true
+	facebook:   				true
+	gplus:      				true
+	hn:         				false
+
+# Analytics     
+analytics:
+  google: 
+    # eg. 'UA-123-12'
+    id:       				false
+
+# Google Fonts
+# eg. 'Droid+Sans:400,700|Droid+Serif:400,700'
+google_font: 					"Droid+Sans:400,700"
 
 
-markdown: redcarpet
-# markdown:      maruku
-# markdown_ext:  markdown,mkd,mkdn,md
-# textile_ext:   textile
 
-excerpt_separator: "\n\n"
+#####################################################################
+# jekyll settings
+#####################################################################
+
+source:      					.
+destination: 					./_build
+plugins:     					./_plugins
+layouts:     					./_layouts
+include:     					['.htaccess']
+# exclude:     					[]
+keep_files:  					['.git','.svn']
+pygments:    					true
+markdown: 						rdiscount
+permalink:     				pretty
+paginate_path: 				'page:num'
+paginate: 						5
+excerpt_separator: 		"<!-- more -->"
+
+
+
+#####################################################################
+# jekyll-assets: see more at https://github.com/ixti/jekyll-assets
+#####################################################################
+
+# assets:
+#   dirname: assets
+#   baseurl: /assets/
+#   sources:
+#     - _assets/js
+#     - _assets/css
+#     - _assets/imgs
+#   js_compressor: uglifier
+#   css_compressor: sass
+#   cachebust: none
+#   cache: false
+#   gzip: [ text/css, application/javascript ]
+#   debug: false
