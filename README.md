@@ -5,12 +5,10 @@ My boilerplate for building sites/blogs powered by Jekyll.
     bundle install
     jekyll serve --watch
 
-_Note: Requires Ruby version 1.9.3 =>.   
+_Note: Requires Ruby version 2.0.0 =>.   
     
 ## Configuration
 Edit: _config.yml
-
-_Note: when editing _config.yml, you need to restart jekyll to see the changes.__
 
     
 -----
@@ -18,12 +16,15 @@ _Note: when editing _config.yml, you need to restart jekyll to see the changes._
 
 ## Authors
 
-Originally build for [sendtoinc.com](https://sendtoinc.com), your workspace for sharing and organizing knowledge
-
 **Ara Abcarians**
 
 + [http://twitter.com/itsmeara](http://twitter.com/itsmeara)
 + [http://github.com/itsmeara](http://github.com/itsmeara)
+
+
+## Credits
+
+...
 
 
 ## Copyright and license
