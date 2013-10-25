@@ -1,0 +1,21 @@
+<footer class="siteFooter">
+    <nav class="social">
+        {% if site.twitter %}
+        <a href="https://twitter.com/{{ site.twitter }}" title="Follow me on Twitter" target="_blank">
+            Twitter
+        </a>
+        {% endif %}
+
+        {% if site.github %}
+        <a href="http://github.com/{{ site.github }}" title="Follow me on Github" target="_blank">
+            Github
+        </a>
+        {% endif %}   
+
+        <a href="/feed.xml" title="RSS Feed">
+            RSS
+        </a>
+    </nav>
+
+    <p class="copyright">&copy; {{ site.time | date: "%Y" }} {{ site.author.name }}. All rights reserved.</p>
+</footer> <!-- /.siteFooter -->

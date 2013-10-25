@@ -14,7 +14,7 @@ Edit: _config.yml
 -----
 
 
-## Authors
+## Author
 
 **Ara Abcarians**
 

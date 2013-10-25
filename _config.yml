@@ -1,82 +1,56 @@
 #####################################################################
-# Blog specific settings
+# Site/blog specific settings
 #####################################################################
 
 # Blog Information
-title:       					"Site title"
-tagline:     					"subtitle"
-description:  				"site description"
-short_name:   				"Company Name"
-baseurl:          		/
-url:          				http://example.com/
-
+title:                "Site title"
+tagline:              "subtitle"
+description:          "site description"
+short_name:           "Company Name"
+baseurl:              /
+url:                  http://example.com/
 author:
-  name:       				""
-  email:      				""
+  name:               "Ara Abcarians"
+  email:              "hello@itsmeara.com"
 
-facebook:     				fbname
-twitter:      				twittername
-github:      					githubname
-gplus:        				'101183822199340201470'
-
-# Comments
-# disqus:
-#   # Eg. "exampleblog" Set to false to disable comments
-#   shortname:  false
+twitter:              twittername
+github:               githubname
+gplus:                '101183822199340201470'
 
 # Sharing settings
 sharing:
-	twitter:    				true
-	facebook:   				true
-	gplus:      				true
-	hn:         				false
+  twitter:            true
+  facebook:           true
+  gplus:              true
+  hn:                 false
 
 # Analytics     
 analytics:
   google: 
     # eg. 'UA-123-12'
-    id:       				false
+    site_id:               'UA-123-12'
 
 # Google Fonts
 # eg. 'Droid+Sans:400,700|Droid+Serif:400,700'
-google_font: 					"Droid+Sans:400,700"
+google_font:          "Droid+Sans:400,700"
 
-
-
-#####################################################################
-# jekyll settings
-#####################################################################
-
-source:      					.
-destination: 					./_build
-plugins:     					./_plugins
-layouts:     					./_layouts
-include:     					['.htaccess']
-# exclude:     					[]
-keep_files:  					['.git','.svn']
-pygments:    					true
-markdown: 						rdiscount
-permalink:     				pretty
-paginate_path: 				'page:num'
-paginate: 						5
-excerpt_separator: 		"<!-- more -->"
 
 
 
 #####################################################################
-# jekyll-assets: see more at https://github.com/ixti/jekyll-assets
+# General jekyll settings
 #####################################################################
 
-# assets:
-#   dirname: assets
-#   baseurl: /assets/
-#   sources:
-#     - _assets/js
-#     - _assets/css
-#     - _assets/imgs
-#   js_compressor: uglifier
-#   css_compressor: sass
-#   cachebust: none
-#   cache: false
-#   gzip: [ text/css, application/javascript ]
-#   debug: false
+source:               .
+destination:          ./_build
+plugins:              ./_plugins
+layouts:              ./_layouts
+include:              ['.htaccess']
+# exclude:              []
+keep_files:           ['.git','.svn']
+pygments:             true
+markdown:             rdiscount
+permalink:            pretty
+# paginate_path:        'page:num'
+paginate:             5
+excerpt_separator:    "<!-- more -->"

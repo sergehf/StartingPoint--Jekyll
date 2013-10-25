@@ -1,75 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width; initial-scale=1.0, maximum-scale=1">
 
         <!-- Prefetch DNS for external assets (Twitter widgets etc). -->
-        <link rel="dns-prefetch" href="//fonts.googleapis.com">
-        <!-- <link rel="dns-prefetch" href="//s3.buysellads.com"> -->
-        <link rel="dns-prefetch" href="//platform.twitter.com">
-        <link rel="dns-prefetch" href="//www.google-analytics.com">
-        <!-- <link rel="dns-prefetch" href="//themes.googleusercontent.com"> -->
-        <!-- <link rel="dns-prefetch" href="//stats.buysellads.com"> -->
+        <!-- <link rel="dns-prefetch" href="//platform.twitter.com">
         <link rel="dns-prefetch" href="//p.twitter.com">
         <link rel="dns-prefetch" href="//cdn.api.twitter.com">
+        <link rel="dns-prefetch" href="//fonts.googleapis.com">
+        <link rel="dns-prefetch" href="//www.google-analytics.com"> -->
 
         <title>
-            {% if page.title %}{{ page.title }} &mdash; {{ site.title }}{% else %}{{ site.title }} &mdash; {{ site.tagline }}{% endif %}
+            {% if page.title %}
+            {{ page.title }} &mdash; {{ site.title }}
+            {% else %}
+            {{ site.title }} &mdash; {{ site.tagline }}
+            {% endif %}
         </title>
 
-        <!-- CSS -->
-        {% stylesheet main %}
-        {% if site.google_font %}
-        <link href="http://fonts.googleapis.com/css?family={{ site.google_font }}" rel="stylesheet" type="text/css">
-        {% endif %}
-
-        <!-- Icons -->
-        <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
-        <link rel="apple-touch-icon" href="/assets/imgs/icon.png"/>
-        <meta name="apple-mobile-web-app-title" content="{{ site.short_name }}">
-
-        <!-- RSS & Social -->
-        <link href="{{ site_url }}/feed.xml" rel="alternate" type="application/rss+xml" title="{{ site.title }}" />
-
-        <!-- Google -->
-        {% if page.site.gplus %}
-        <link rel="publisher" href="https://plus.google.com/{{ site.gplus }}">
-        {% endif %} 
-        {% if page.gplus %}
-        <link rel="author" href="https://plus.google.com/{{ page.gplus }}">
-        {% endif %} 
-
-        <!-- Open Graph -->
-        <meta property="og:type" content="article">
-        <meta property="og:title" content="{% if page.title %}{{ page.title }} {% else %}{{ site.title }}{% endif %}">
-        <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-        <meta property="og:site_name" content="{{ site.title }}"> 
-        {% if page.date %}
-        <meta property="article:published_time" content="{{page.date | date_to_xmlschema}}" >
-        {% endif %}
-
         {% if page.excerpt %}
-        <meta property="og:description" content="{{ page.excerpt }}">
         <meta name="description" content="{{ page.excerpt }}"/>
+        {% else if page.description %}
+        <meta name="description" content="{{ page.description }}">
         {% else %}
         <meta name="description" content="{{ site.description }}">
         {% endif %}
-           
+        
+        <!-- Google -->
+        {% if site.gplus %}
+        <link rel="publisher" href="https://plus.google.com/{{ site.gplus }}">
+        {% endif %} 
+
+        <!-- Misc -->
+        <meta name="author" content="humans.txt">
+        <link rel="shortcut icon" href="/assets/favicon.ico">
+        <link rel="apple-touch-icon" href="/assets/imgs/icon.png">
+        <meta name="apple-mobile-web-app-title" content="{{ site.short_name }}">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="/assets/css/master.css">
+        {% if site.google_font %}
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family={{ site.google_font }}">
+        {% endif %}
+
+        <!-- RSS -->
+        <link href="{{ site.url }}/feed.xml" rel="alternate" type="application/rss+xml" title="{{ site.title }}" />
+
     </head>
     <body class="page  {{ page.page-class }}">
 
-        <div class="site">
-            {% include header.html %}
+        <div class="siteContainer">
+            {% include site-header.html %}
 
-            <div class="content">
+            <div class="mainContent">
                 {{ content }}
             </div> <!-- /.content -->
 
-            {% include footer.html %}
+            {% include site-footer.html %}
         </div> <!-- /.site -->
 
-        {% include _scripts.html %}
+        {% include site-scripts.html %}
 
     </body>
 </html>

@@ -1,11 +1,11 @@
 ---
 layout: default
-pageClass: "post"
+page-class: page--post
 ---
 
 <article class="post">
     <header class="post-header">
-        <h1 class="post-title">{{ page.title }}</h1>
+        <h1 class="post-header-title">{{ page.title }}</h1>
     </header>
 
     <span class="post-date">{{ page.date | date_to_string }}</span>
@@ -15,13 +15,13 @@ pageClass: "post"
     </div>
 </article>
 
-<section class="related">
-    <header>
-        <h2>Related Posts</h2>
+<section class="relatedPosts">
+    <header class="relatedPosts-header">
+        <h2 class="relatedPosts-header-title">Related Posts</h2>
     </header>
   
-    <ul class="posts">
-        {% for post in site.related_posts limit:3 %}
+    <ul class="relatedPosts-list">
+        {% for post in site.related_posts limit:5 %}
             <li>
                 <h3>
                     <a href="{{ post.url }}">
