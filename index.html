@@ -5,15 +5,18 @@ layout: default
 <div class="posts">
     {% for post in paginator.posts %}
     <div class="post">
-        <h1>
-            <a href="{{ post.url }}">
-                {{ post.title }}
-            </a>
-        </h1>
+        <header class="post-header">
+            <h2 class="post-header-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+            <p class="post-date"><time pubdate="pubdate">{{ post.date | date_to_string }}</time></p>
+        </header>
 
-        <span class="post-date">{{ post.date | date_to_string }}</span>
+        <div class="post-entry">
+            {{ post.content | split: '<!-- more -->' | first }}
+        </div>
 
-        {{ post.content }}
+        <footer>
+            <a href="{{ post.url }}" class="btn">Read More</a> 
+        </footer>        
     </div>
     {% endfor %}
 </div>
